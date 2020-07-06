@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct ShoppingItem {
+    var name: String
+    var image: String
+    var added: Bool
+}
