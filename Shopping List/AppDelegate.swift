@@ -7,25 +7,18 @@
 //
 
 import UIKit
-import UserNotifications
+
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private let notificationCenter = UNUserNotificationCenter.current()
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        notificationCenter.requestAuthorization(options: [.alert,.badge,.sound]) { (didAllow, error) in
-            
-            if !didAllow{
-                print("User declined")
-            }
-            
-        }
         
         return true
     }
