@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" title="Shopping List" id="YaC-Tu-3w4">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="llI-32-Anp">
                             <connections>
-                                <segue destination="Mmy-A5-T6S" kind="show" id="BTz-sD-amh"/>
+                                <segue destination="Mmy-A5-T6S" kind="show" identifier="CheckOutSegue" id="BTz-sD-amh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,6 +135,9 @@
                                             <constraint firstAttribute="height" constant="30" id="bWQ-Kh-YtL"/>
                                         </constraints>
                                         <state key="normal" title="Send order"/>
+                                        <connections>
+                                            <action selector="sendOrderButtonPressed:" destination="Mmy-A5-T6S" eventType="touchUpInside" id="ypv-Rs-hkM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -156,6 +159,11 @@
                         <viewLayoutGuide key="safeArea" id="ceX-ra-EZG"/>
                     </view>
                     <navigationItem key="navigationItem" id="O4l-XE-T8j"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="hyP-ba-T1B" id="QSf-Kl-sC3"/>
+                        <outlet property="nameTextField" destination="igF-BU-tUh" id="gbh-Ir-Z8G"/>
+                        <outlet property="titleLabel" destination="dTA-AI-Ogm" id="DPc-wO-ada"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAf-p7-uqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

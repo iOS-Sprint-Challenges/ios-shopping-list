@@ -35,15 +35,18 @@ class ShoppingListCollectionViewController: UICollectionViewController {
         }
         self.navigationItem.rightBarButtonItem?.title = "Cart\(cartCount != 0 ? ": \(cartCount)" : "")"
     }
-    /*
+ 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "CheckOutSegue"{
+            if let placeOrderVC = segue.destination as? PlaceOrderViewController{
+                placeOrderVC.numberOfItems = self.cartCount
+//                placeOrderVC.cart =
+            }
+        }
     }
-    */
+ 
 
     // MARK: - UICollectionViewDataSource
 
