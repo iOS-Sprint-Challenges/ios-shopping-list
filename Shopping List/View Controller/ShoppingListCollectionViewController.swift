@@ -27,13 +27,24 @@ class ShoppingListCollectionViewController: UICollectionViewController {
         self.collectionView.reloadData()
     }
     
-    private func updateCart(isAdded: Bool){
-        if isAdded {
+    private func updateCart(item: ShoppingItem){
+        if item.added {
             cartCount += 1
         }else{
             cartCount -= 1
         }
         self.navigationItem.rightBarButtonItem?.title = "Cart\(cartCount != 0 ? ": \(cartCount)" : "")"
+    }
+    
+    private func getItemsInCart() -> [ShoppingItem]{
+        var shoppingCart = [ShoppingItem]()
+        for item in data.itemList{
+            if item.added{
+                shoppingCart.append(item)
+            }
+        }
+        
+        return shoppingCart
     }
  
     // MARK: - Navigation
@@ -42,7 +53,7 @@ class ShoppingListCollectionViewController: UICollectionViewController {
         if segue.identifier == "CheckOutSegue"{
             if let placeOrderVC = segue.destination as? PlaceOrderViewController{
                 placeOrderVC.numberOfItems = self.cartCount
-//                placeOrderVC.cart =
+                placeOrderVC.cart = getItemsInCart()
             }
         }
     }
@@ -76,7 +87,7 @@ class ShoppingListCollectionViewController: UICollectionViewController {
         
         data.itemList[indexPath.row].added.toggle()
         
-        updateCart(isAdded: data.itemList[indexPath.row].added)
+        updateCart(item: data.itemList[indexPath.row])
         
         updateViews()
     }
