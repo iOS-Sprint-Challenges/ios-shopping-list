@@ -14,7 +14,7 @@ class ShoppingListCollectionViewController: UICollectionViewController {
     
     
     //MARK: - Properties
-    private var cart = [ShoppingItem]()
+    private var cartCount: Int = 0
     private var data = ShoppingDataController()
     
     //MARK: - View Cycle
@@ -25,17 +25,15 @@ class ShoppingListCollectionViewController: UICollectionViewController {
     
     private func updateViews() {
         self.collectionView.reloadData()
-        print(cart)
     }
     
-    private func addToCart(item: ShoppingItem, index: IndexPath){
-        if item.added {
-            cart.append(item)
+    private func updateCart(isAdded: Bool){
+        if isAdded {
+            cartCount += 1
         }else{
-            if let index = cart.firstIndex(of: item){
-                cart.remove(at: index)
-            }
+            cartCount -= 1
         }
+        self.navigationItem.rightBarButtonItem?.title = "Cart\(cartCount != 0 ? ": \(cartCount)" : "")"
     }
     /*
     // MARK: - Navigation
@@ -69,14 +67,13 @@ class ShoppingListCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        var item = data.itemList[indexPath.row]
-        item.added.toggle()
+        data.itemList[indexPath.row].added.toggle()
         
-        addToCart(item:item, index: indexPath)
+        updateCart(isAdded: data.itemList[indexPath.row].added)
         
         updateViews()
     }
