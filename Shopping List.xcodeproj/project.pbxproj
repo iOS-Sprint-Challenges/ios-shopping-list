@@ -10,6 +10,7 @@
 		045DAF3A24B46F660046E116 /* ShoppingListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF3924B46F660046E116 /* ShoppingListCollectionViewController.swift */; };
 		045DAF3C24B4755B0046E116 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF3B24B4755B0046E116 /* ItemCollectionViewCell.swift */; };
 		045DAF3E24B4869E0046E116 /* ShoppingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF3D24B4869E0046E116 /* ShoppingDataController.swift */; };
+		045DAF4124B4EB5C0046E116 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF4024B4EB5B0046E116 /* NotificationManager.swift */; };
 		04FAD2D424B22ADE006464FE /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2D324B22ADE006464FE /* ShoppingItem.swift */; };
 		4613E91221143BFC00E7FF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E91121143BFC00E7FF73 /* AppDelegate.swift */; };
 		4613E91421143BFC00E7FF73 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E91321143BFC00E7FF73 /* PlaceOrderViewController.swift */; };
@@ -22,6 +23,7 @@
 		045DAF3924B46F660046E116 /* ShoppingListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewController.swift; sourceTree = "<group>"; };
 		045DAF3B24B4755B0046E116 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		045DAF3D24B4869E0046E116 /* ShoppingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDataController.swift; sourceTree = "<group>"; };
+		045DAF4024B4EB5B0046E116 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		04FAD2D324B22ADE006464FE /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		4613E90E21143BFC00E7FF73 /* Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4613E91121143BFC00E7FF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 				045DAF3D24B4869E0046E116 /* ShoppingDataController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		045DAF4224B4EB600046E116 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				045DAF4024B4EB5B0046E116 /* NotificationManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		04FAD2D124B22AA7006464FE /* View Controller */ = {
@@ -97,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4613E91121143BFC00E7FF73 /* AppDelegate.swift */,
+				045DAF4224B4EB600046E116 /* Helper */,
 				045DAF3F24B486A30046E116 /* Model Controller */,
 				04FAD2D524B22AE3006464FE /* Model */,
 				04FAD2D124B22AA7006464FE /* View Controller */,
@@ -184,6 +195,7 @@
 				045DAF3E24B4869E0046E116 /* ShoppingDataController.swift in Sources */,
 				045DAF3A24B46F660046E116 /* ShoppingListCollectionViewController.swift in Sources */,
 				04FAD2D424B22ADE006464FE /* ShoppingItem.swift in Sources */,
+				045DAF4124B4EB5C0046E116 /* NotificationManager.swift in Sources */,
 				4613E91421143BFC00E7FF73 /* PlaceOrderViewController.swift in Sources */,
 				4613E91221143BFC00E7FF73 /* AppDelegate.swift in Sources */,
 			);
