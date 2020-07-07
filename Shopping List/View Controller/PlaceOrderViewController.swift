@@ -19,16 +19,21 @@ class PlaceOrderViewController: UIViewController {
     var cart = [ShoppingItem]()
     var numberOfItems: Int = 0
     
+    //MARK: - View Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
     }
 
+    //MARK: - Private methods
     private func updateViews(){
         
         titleLabel.text = "You currently have \(numberOfItems) item(s) in your shopping list."
     }
 
+    //MARK: - Actions
+    
     @IBAction func sendOrderButtonPressed(_ sender: UIButton) {
         print("Sent order!")
     }
