@@ -11,19 +11,32 @@ import UIKit
 private let reuseIdentifier = "ItemCell"
 
 class ShoppingListCollectionViewController: UICollectionViewController {
-
+    
+    
+    //MARK: - Properties
+    private var cart = [ShoppingItem]()
+    private var data = ShoppingDataController()
+    
+    //MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    private func updateViews() {
+        self.collectionView.reloadData()
+        print(cart)
+    }
+    
+    private func addToCart(item: ShoppingItem, index: IndexPath){
+        if item.added {
+            cart.append(item)
+        }else{
+            if let index = cart.firstIndex(of: item){
+                cart.remove(at: index)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -34,17 +47,10 @@ class ShoppingListCollectionViewController: UICollectionViewController {
     }
     */
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
+    // MARK: - UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 2
+        return data.itemList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,43 +58,27 @@ class ShoppingListCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
             
         }
+        
+        let item = data.itemList[indexPath.row]
     
-        cell.addToCartLabel.text = "Not Added" // x ? "Not added":"Added"
-        cell.imageLabel.image = UIImage(named: "apple")
-        cell.itemNameLabel.text = "Apple"
-    
+        cell.addToCartLabel.text = item.added ? "Added" : "Not added"
+        cell.imageLabel.image = UIImage(named: item.image)
+        cell.itemNameLabel.text = item.name
+        cell.backgroundColor = item.added ? UIColor.green : UIColor.clear
+        
         return cell
     }
 
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        var item = data.itemList[indexPath.row]
+        item.added.toggle()
+        
+        addToCart(item:item, index: indexPath)
+        
+        updateViews()
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

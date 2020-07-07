@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ShoppingItem {
+struct ShoppingItem: Equatable {
     var name: String
-    var image: URL
+    var image: String
     var added: Bool = false
 }
