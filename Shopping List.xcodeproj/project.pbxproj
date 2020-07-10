@@ -11,6 +11,7 @@
 		045DAF3C24B4755B0046E116 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF3B24B4755B0046E116 /* ItemCollectionViewCell.swift */; };
 		045DAF3E24B4869E0046E116 /* ShoppingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF3D24B4869E0046E116 /* ShoppingDataController.swift */; };
 		045DAF4124B4EB5C0046E116 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF4024B4EB5B0046E116 /* NotificationManager.swift */; };
+		045DAF6C24B84A9D0046E116 /* Shopping_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045DAF6B24B84A9D0046E116 /* Shopping_ListTests.swift */; };
 		04FAD2D424B22ADE006464FE /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAD2D324B22ADE006464FE /* ShoppingItem.swift */; };
 		4613E91221143BFC00E7FF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E91121143BFC00E7FF73 /* AppDelegate.swift */; };
 		4613E91421143BFC00E7FF73 /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613E91321143BFC00E7FF73 /* PlaceOrderViewController.swift */; };
@@ -19,11 +20,24 @@
 		4613E91C21143BFD00E7FF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4613E91A21143BFD00E7FF73 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		045DAF6E24B84A9D0046E116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4613E90621143BFC00E7FF73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4613E90D21143BFC00E7FF73;
+			remoteInfo = "Shopping List";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		045DAF3924B46F660046E116 /* ShoppingListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCollectionViewController.swift; sourceTree = "<group>"; };
 		045DAF3B24B4755B0046E116 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		045DAF3D24B4869E0046E116 /* ShoppingDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDataController.swift; sourceTree = "<group>"; };
 		045DAF4024B4EB5B0046E116 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		045DAF6924B84A9D0046E116 /* Shopping ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		045DAF6B24B84A9D0046E116 /* Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_ListTests.swift; sourceTree = "<group>"; };
+		045DAF6D24B84A9D0046E116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04FAD2D324B22ADE006464FE /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		4613E90E21143BFC00E7FF73 /* Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4613E91121143BFC00E7FF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		045DAF6624B84A9D0046E116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4613E90B21143BFC00E7FF73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +80,15 @@
 				045DAF4024B4EB5B0046E116 /* NotificationManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		045DAF6A24B84A9D0046E116 /* Shopping ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				045DAF6B24B84A9D0046E116 /* Shopping_ListTests.swift */,
+				045DAF6D24B84A9D0046E116 /* Info.plist */,
+			);
+			path = "Shopping ListTests";
 			sourceTree = "<group>";
 		};
 		04FAD2D124B22AA7006464FE /* View Controller */ = {
@@ -91,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4613E91021143BFC00E7FF73 /* Shopping List */,
+				045DAF6A24B84A9D0046E116 /* Shopping ListTests */,
 				4613E90F21143BFC00E7FF73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4613E90E21143BFC00E7FF73 /* Shopping List.app */,
+				045DAF6924B84A9D0046E116 /* Shopping ListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		045DAF6824B84A9D0046E116 /* Shopping ListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 045DAF7224B84A9D0046E116 /* Build configuration list for PBXNativeTarget "Shopping ListTests" */;
+			buildPhases = (
+				045DAF6524B84A9D0046E116 /* Sources */,
+				045DAF6624B84A9D0046E116 /* Frameworks */,
+				045DAF6724B84A9D0046E116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				045DAF6F24B84A9D0046E116 /* PBXTargetDependency */,
+			);
+			name = "Shopping ListTests";
+			productName = "Shopping ListTests";
+			productReference = 045DAF6924B84A9D0046E116 /* Shopping ListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4613E90D21143BFC00E7FF73 /* Shopping List */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4613E92021143BFD00E7FF73 /* Build configuration list for PBXNativeTarget "Shopping List" */;
@@ -145,10 +195,14 @@
 		4613E90621143BFC00E7FF73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
+					045DAF6824B84A9D0046E116 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4613E90D21143BFC00E7FF73;
+					};
 					4613E90D21143BFC00E7FF73 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1150;
@@ -169,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				4613E90D21143BFC00E7FF73 /* Shopping List */,
+				045DAF6824B84A9D0046E116 /* Shopping ListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		045DAF6724B84A9D0046E116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4613E90C21143BFC00E7FF73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +249,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		045DAF6524B84A9D0046E116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045DAF6C24B84A9D0046E116 /* Shopping_ListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4613E90A21143BFC00E7FF73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +272,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		045DAF6F24B84A9D0046E116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4613E90D21143BFC00E7FF73 /* Shopping List */;
+			targetProxy = 045DAF6E24B84A9D0046E116 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4613E91521143BFC00E7FF73 /* Main.storyboard */ = {
@@ -223,6 +301,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		045DAF7024B84A9D0046E116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
+				INFOPLIST_FILE = "Shopping ListTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.productions.fritzgt.Shopping-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopping List.app/Shopping List";
+			};
+			name = Debug;
+		};
+		045DAF7124B84A9D0046E116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
+				INFOPLIST_FILE = "Shopping ListTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.productions.fritzgt.Shopping-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopping List.app/Shopping List";
+			};
+			name = Release;
+		};
 		4613E91E21143BFD00E7FF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -376,6 +499,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		045DAF7224B84A9D0046E116 /* Build configuration list for PBXNativeTarget "Shopping ListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045DAF7024B84A9D0046E116 /* Debug */,
+				045DAF7124B84A9D0046E116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4613E90921143BFC00E7FF73 /* Build configuration list for PBXProject "Shopping List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
