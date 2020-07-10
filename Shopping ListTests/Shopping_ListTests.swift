@@ -19,7 +19,10 @@ class Shopping_ListTests: XCTestCase {
         XCTAssertFalse(item.added)
     }
     
-    
-
+    func testShoppingData() {
+        let data = ShoppingDataController()
+        
+        XCTAssertGreaterThan(data.itemList.count, 1)
+    }
 
 }
